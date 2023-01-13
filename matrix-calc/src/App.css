@@ -1,0 +1,53 @@
+.Header {
+    margin: 20px 0px;
+    width: 100%;
+    padding: 5px;
+    height: 40px;
+    font-size: 30px;
+    text-align: center;
+    background-color: black;
+    color: white;
+}
+.FlexContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.SizeInput {
+    margin: 10px;
+    width: 50px;
+    border-radius: 5px;
+    border-color: rgb(153, 152, 152);
+    border-width: 2px;
+    border-style: solid;
+}
+.MatrixRow {
+    margin: 15px;
+    display: flex;
+    justify-content: center;
+}
+.MatrixItem {
+    margin: 10px;
+    padding: 5px 20px;
+    border-radius: 7px;
+    border-color: rgb(153, 152, 152);
+    border-width: 2px;
+    border-style: solid;
+    flex-direction: row;
+}
+.Submit {
+    margin: 10px;
+    padding: 5px;
+    border-radius: 7px;
+    border-color: rgb(146, 146, 146);
+    border-width: 2px;
+    border-style: solid;
+    background-color: rgb(172, 213, 255);
+}
+.Submit:active {
+    background-color:rgb(104, 179, 255);
+    color: rgb(172, 172, 172)
+}
+.Submit:hover {
+    padding: 5.3px;
+}

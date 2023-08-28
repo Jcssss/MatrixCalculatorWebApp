@@ -1,13 +1,106 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Sora;
+}
+.page{
+    background-image: linear-gradient(lightcoral, lightblue);
+    height: 100vh;
+    padding-top: 20px;
+}
+.header {
+    width: 100%;
+    padding: 5px;
+    height: 70px;
+    font-size: 40px;
+    text-align: center;
+    color: black;
+}
+.content-container div label {
+    font-size: 20px;
+}
+.flex-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.size-input {
+    margin-left: 10px;
+    width: 50px;
+    height: 20px;
+    padding: 5px;
+    border-radius: 5px;
+    border-color: rgb(56, 56, 56);
+    border-width: 3px;
+    border-style: solid;
+}
+.size-input:focus {
+    background-color: rgb(243, 243, 243);
+    outline: none;
+}
+.input-container {
+    margin-top: 20px;
+}
+.matrix-row {
+    display: flex;
+    justify-content: center;
+}
+.submit {
+    padding: 5px;
+    margin-top: 10px;
+    height: 40px;
+    width: 150px;
+    font-size: 15px;
+    border-radius: 50px;
+    border-color: rgb(56, 56, 56);
+    border-width: 3px;
+    border-style: solid;
+    text-align: center;
+}
+.submit:hover {
+    cursor: pointer;
+    background-color: rgb(226, 226, 226);
+}
+.value-input {
+    margin: 10px;
+    padding: 10px;
+    width: 70px;
+    height: 30px;
+    font-size: 20px;
+    border-radius: 10px;
+    border-color: rgb(56, 56, 56);
+    border-width: 3px;
+    border-style: solid;
+}
+.value-input:focus {
+    background-color: rgb(243, 243, 243);
+    outline: none;
+}
+.icon {
+    font-size: 40px;
+    padding-right: 20px;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.calculate {
+    margin: 20px 0px;
+    padding: 5px;
+    height: 40px;
+    width: 200px;
+    font-size: 20px;
+    background-color: white;
+    border-radius: 50px;
+    border-color: rgb(56, 56, 56);
+    border-width: 3px;
+    border-style: solid;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.calculate:hover {
+    background-color: rgb(226, 226, 226);
+    cursor: pointer;
 }

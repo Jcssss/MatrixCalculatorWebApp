@@ -202,7 +202,7 @@ class Matrix {
             val = this.getEntry(i, col);
 
             console.log(this.matrix);
-            if (val != 0 && val != -1) {
+            if (val != 0 && col != -1) {
                 for (var j = 0; j < i; j++) {
                     mult = this.getEntry(j, col) / val;
                     this.subtractRow(i, j, mult);

@@ -1,5 +1,5 @@
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Matrix from './matrix-calc-code/matrix'
 import { faCalculator } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -8,9 +8,25 @@ function App() {
     const [values, setValues] = useState([[0, 0, 0], [0, 0, 0], [0, 0, 0]]);
     const [height, setHeight] = useState(3);
     const [width, setWidth] = useState(3);
+    const [center, setCenter] = useState(true);
+
+    useEffect(() => {
+        window.addEventListener("resize", isOverflown, false);
+    });
+
+    useEffect(() => {
+        isOverflown();
+    }, [values]);
+
+    const isOverflown = () => {
+        var element = document.getElementsByClassName("input-container");
+        console.log(element[0].scrollWidth + ":" +  element[0].clientWidth);
+        console.log(element[0].scrollWidth > element[0].clientWidth);
+        setCenter(element[0].scrollWidth <= element[0].clientWidth);
+    }
 
     const resizeMatrix = () => {
-        var newArr = []
+        var newArr = [];
         for (var i = 0; i < height; i++) {
             newArr.push([]);
             for (var j = 0; j < width; j++) {
@@ -69,7 +85,7 @@ function App() {
                 <div className="input-container">
                     { 
                         values.map((row, i) => (
-                            <div key={i} className="matrix-row">
+                            <div key={i} className={`matrix-row ${(center)? 'center':''}`}>
                                 {
                                     row.map((item, j) => (
                                         <input 

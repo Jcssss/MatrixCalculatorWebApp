@@ -20,8 +20,6 @@ function App() {
 
     const isOverflown = () => {
         var element = document.getElementsByClassName("input-container");
-        console.log(element[0].scrollWidth + ":" +  element[0].clientWidth);
-        console.log(element[0].scrollWidth > element[0].clientWidth);
         setCenter(element[0].scrollWidth <= element[0].clientWidth);
     }
 
